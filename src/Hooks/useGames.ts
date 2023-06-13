@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
 
-interface Game {
+export interface Game {
   id: number;
   name: String;
+  background_image: string;
 }
 
-interface Responce {
+interface Response {
   count: number;
   results: Game[];
 }
@@ -18,11 +19,9 @@ function useGames() {
   useEffect(() => {
     const controller = new AbortController();
     apiClient
-
-      .get<Responce>("/games", { signal: controller.signal })
+      .get<Response>("/games", { signal: controller.signal })
       .then((res) => {
         setGames(res.data.results);
-        console.log(res.data.results);
       })
       .catch((err) => setError(err.message));
     return () => controller.abort();

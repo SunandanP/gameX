@@ -1,15 +1,21 @@
+import { PinInputDescendantsProvider, SimpleGrid } from "@chakra-ui/react";
 import useGames from "../Hooks/useGames";
+import GameCard from "./GameCard";
 
 function GameGrid() {
   const { games, error } = useGames();
   return (
     <>
       {error != "canceled" && error && <p>{error}</p>}
-      <ul>
+      <SimpleGrid
+        spacing={10}
+        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        padding={10}
+      >
         {games.map((game) => (
-          <li key={game.id}>{game.name}</li>
+          <GameCard key={game.id} game={game} />
         ))}
-      </ul>
+      </SimpleGrid>
     </>
   );
 }
