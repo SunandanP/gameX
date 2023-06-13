@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { Game, Platform } from "../Hooks/useGames";
+import { Game } from "../Hooks/useGames";
 import {
   FaWindows,
   FaLinux,
