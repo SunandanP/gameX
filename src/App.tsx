@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Navbar from "./Components/Navbar";
+import ColorModeSwitch from "./Components/ColorModeSwitch";
 
 function App() {
   const [count, setCount] = useState(0);
