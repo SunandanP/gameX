@@ -19,7 +19,13 @@ function CriticBadge({ metacritic }: Props) {
 
   return (
     <>
-      <Badge fontSize={17} paddingX={3} colorScheme={colorMap(metacritic)}>
+      <Badge
+        fontSize={17}
+        paddingX={3}
+        paddingY={2}
+        borderRadius={10}
+        colorScheme={colorMap(metacritic)}
+      >
         {metacritic}
       </Badge>
     </>

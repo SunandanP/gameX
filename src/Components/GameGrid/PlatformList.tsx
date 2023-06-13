@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { Game } from "../Hooks/useGames";
+import { Game } from "../../Hooks/useGames";
 import {
   FaWindows,
   FaLinux,
@@ -35,6 +35,7 @@ function PlatformList({ game }: Props) {
       <HStack spacing={5} marginY={5} padding={1}>
         {game.parent_platforms.map((p) => (
           <Icon
+            key={p.platform.id}
             as={IconMap[p.platform.slug]}
             boxSize={5}
             color={"gray.500"}
