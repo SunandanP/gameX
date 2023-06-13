@@ -1,5 +1,6 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { Button, HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/logo.svg";
+
 function Navbar() {
   return (
     <HStack>
