@@ -10,10 +10,6 @@ interface Props {
 }
 
 function GameCard({ game }: Props) {
-  {
-    // <PlatformList platforms={e.platform} />
-    console.log("Parent");
-  }
   return (
     <>
       <Card borderRadius={10} overflow={"hidden"} shadow={"xl"}>
