@@ -9,7 +9,7 @@ function GameGrid() {
       {error != "canceled" && error && <p>{error}</p>}
       <SimpleGrid
         spacing={10}
-        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
         padding={10}
       >
         {games.map((game) => (

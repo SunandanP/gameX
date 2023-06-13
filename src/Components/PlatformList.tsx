@@ -32,7 +32,7 @@ function PlatformList({ game }: Props) {
 
   return (
     <>
-      <HStack spacing={10} marginY={5} padding={1}>
+      <HStack spacing={5} marginY={5} padding={1}>
         {game.parent_platforms.map((p) => (
           <Icon
             as={IconMap[p.platform.slug]}
